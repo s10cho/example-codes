@@ -1,0 +1,23 @@
+### Auth Signup
+POST http://localhost:8080/auth/signup
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+
+### Auth Login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+"email": "{{email}}",
+"password": "{{password}}"
+}
+> {% client.global.set("accessToken", response.body.accessToken); %}
+
+### Member me
+GET http://localhost:8080/api/member/me
+Authorization: Bearer {{accessToken}}

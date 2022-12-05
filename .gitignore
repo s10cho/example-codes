@@ -1,0 +1,11 @@
+# Custom
+.gradle
+
+# IntelliJ Idea
+.idea/
+*.iml
+*.ipr
+
+# build
+build/
+out/
