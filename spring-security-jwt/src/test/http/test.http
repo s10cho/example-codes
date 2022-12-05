@@ -7,7 +7,6 @@ Content-Type: application/json
   "password": "{{password}}"
 }
 
-
 ### Auth Login
 POST http://localhost:8080/auth/login
 Content-Type: application/json
@@ -16,8 +15,21 @@ Content-Type: application/json
 "email": "{{email}}",
 "password": "{{password}}"
 }
-> {% client.global.set("accessToken", response.body.accessToken); %}
+> {%
+    client.global.set("accessToken", response.body.accessToken);
+    client.global.set("refreshToken", response.body.refreshToken);
+%}
 
 ### Member me
 GET http://localhost:8080/api/member/me
 Authorization: Bearer {{accessToken}}
+
+
+### Auth Reissue
+POST http://localhost:8080/auth/reissue
+Content-Type: application/json
+
+{
+  "accessToken": "{{accessToken}}",
+  "refreshToken": "{{refreshToken}}"
+}
