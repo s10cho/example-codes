@@ -6,7 +6,9 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -19,7 +21,7 @@ public class Member {
     private String email;
 
     public static void main(String[] args) {
-        System.out.println(new Member("john", "존", "john@gmail.com"));
+        log.info("member: {}", new Member("john", "존", "john@gmail.com"));
     }
 
     @Override

@@ -18,6 +18,8 @@ configurations {
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'org.slf4j:slf4j-api:2.0.5'
+    implementation 'ch.qos.logback:logback-classic:1.4.5'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
 
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
