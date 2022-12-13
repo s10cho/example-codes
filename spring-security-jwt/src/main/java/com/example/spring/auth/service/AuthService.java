@@ -1,12 +1,12 @@
 package com.example.spring.auth.service;
 
 import com.example.spring.auth.domain.RefreshToken;
+import com.example.spring.auth.dto.AuthRequest;
 import com.example.spring.auth.dto.TokenRequest;
 import com.example.spring.auth.dto.TokenResponse;
 import com.example.spring.auth.repository.RefreshTokenRepository;
 import com.example.spring.config.jwt.TokenProvider;
 import com.example.spring.member.domain.Member;
-import com.example.spring.auth.dto.AuthRequest;
 import com.example.spring.member.dto.MemberResponse;
 import com.example.spring.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
