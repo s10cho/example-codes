@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'org.example.spring.cache.caffeine'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -14,13 +14,12 @@ repositories {
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation project(':spring-multi-module-library')
+
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    implementation 'com.github.ben-manes.caffeine:caffeine'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testCompileOnly 'org.projectlombok:lombok:1.18.24'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 }
 
 test {
