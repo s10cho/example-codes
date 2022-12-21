@@ -1,4 +1,4 @@
-package org.example.spring.cache.caffeine;
+package org.example.spring.cache.hazelcast;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @EnableCaching
 @SpringBootApplication
-public class CacheApplication {
+public class HazelcastCacheApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(CacheApplication.class);
+        ConfigurableApplicationContext run = SpringApplication.run(HazelcastCacheApplication.class);
         run.start();
     }
 }
