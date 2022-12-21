@@ -1,0 +1,13 @@
+### apple
+POST http://localhost:8080/reverseString
+Content-Type: text/plain
+
+apple
+
+### apple
+POST http://localhost:8080/reverseString
+Content-Type: application/json
+
+{
+  "value": "apple"
+}
