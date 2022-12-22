@@ -1,0 +1,43 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: eureka-client
+          uri: lb://eureka-client
+          predicates:
+            - Path=/client/**
+          filters:
+            - RewritePath=/client/(?<path>.*), /$\{path}
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/account/**
+          filters:
+            - RewritePath=/account/(?<path>.*), /$\{path}
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/customer/**
+          filters:
+            - RewritePath=/customer/(?<path>.*), /$\{path}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"

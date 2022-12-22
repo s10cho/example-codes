@@ -1,0 +1,4 @@
+GET http://localhost:8080/client/instances/eureka-client
+Accept: application/json
+
+###

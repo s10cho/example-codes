@@ -17,8 +17,13 @@ public class InstanceResource {
 
     private final DiscoveryClient discoveryClient;
 
+    @GetMapping
+    public List<String> findAll() {
+        return this.discoveryClient.getServices();
+    }
+
     @GetMapping("{applicationName}")
-    public List<ServiceInstance> findAll(@PathVariable String applicationName) {
+    public List<ServiceInstance> find(@PathVariable String applicationName) {
         return this.discoveryClient.getInstances(applicationName);
     }
 }
