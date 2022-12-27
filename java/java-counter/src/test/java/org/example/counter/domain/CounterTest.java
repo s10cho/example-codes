@@ -2,6 +2,7 @@ package org.example.counter.domain;
 
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
@@ -19,6 +20,7 @@ class CounterTest {
     }
 
     @Test
+    @DisplayName("Multi thread test")
     void threadTest() throws InterruptedException {
         Counter counter = new Counter();
 
@@ -40,5 +42,6 @@ class CounterTest {
         Thread.sleep(1000);
 
         log.debug("counter.getCount() = {}", counter.getCount());
+        Assertions.assertThat(counter.getCount()).isNotZero();
     }
 }
