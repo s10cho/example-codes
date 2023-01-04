@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<script>
+    axios.defaults.withCredentials = true;
+    axios.get("http://localhost:8080/members")
+        .then(function (result) {
+            console.log("통신 결과 : ", result);
+            console.log("status : ", result.status);
+            console.log("data : ", result.data);
+        })
+        .catch(function (error) {
+            console.log("에러 발생 : ", error);
+        });
+</script>
+<body>
+<h1>Hello word!</h1>
+</body>
+</html>
