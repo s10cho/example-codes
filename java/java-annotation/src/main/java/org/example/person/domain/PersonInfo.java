@@ -4,12 +4,12 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.person.annotation.PersonMention;
+import org.example.person.annotation.Mention;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@PersonMention(mention = "반가워요.")
+@Mention(value = "반가워요.")
 public class PersonInfo implements Person {
     
     private String name;

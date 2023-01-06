@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.function.Function;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.person.annotation.PersonMention;
+import org.example.person.annotation.Mention;
 import org.example.person.domain.Person;
 
 @Slf4j
@@ -17,10 +17,10 @@ public class PersonService {
     }
 
     private void printPersonMention(Annotation[] annotations, String name, int age) {
-        Function<PersonMention, String> message = mention -> String.format("%s(%s) says [%s]", name, age, mention.mention());
+        Function<Mention, String> message = mention -> String.format("%s(%s) says [%s]", name, age, mention.value());
         Arrays.stream(annotations)
-            .filter(PersonMention.class::isInstance)
-            .map(PersonMention.class::cast)
+            .filter(Mention.class::isInstance)
+            .map(Mention.class::cast)
             .map(message)
             .forEach(log::debug);
     }
