@@ -2,3 +2,5 @@ rootProject.name = 'java'
 
 include 'java-core'
 include 'java-counter'
+include 'java-annotation'
+

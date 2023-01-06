@@ -1,0 +1,52 @@
+{
+  "member": {
+    "memberId": "apitesta",
+    "relationship": {
+      "memberRelationship": {
+        "centers": [
+          "apitest",
+          "spectra"
+        ],
+        "teams": [],
+        "centerGroups": [],
+        "topics": []
+      },
+      "rightsRelationship": {
+        "teamRelationship": {},
+        "centerGroupRelationship": []
+      }
+    },
+    "roleGroupId": "AGENT",
+    "states": {
+      "talk": {
+        "state": "active",
+        "maxConcurrentNo": 1,
+        "metadata": {}
+      },
+      "reservationTalk": {
+        "state": "away",
+        "maxConcurrentNo": 50,
+        "metadata": {}
+      },
+      "qna": {
+        "state": "active",
+        "maxConcurrentNo": 100,
+        "metadata": {}
+      },
+      "uq": {
+        "state": "inactive",
+        "maxConcurrentNo": 5,
+        "metadata": {}
+      }
+    },
+    "autoReply": {
+      "newTicketOrMessage": {
+        "enabled": false
+      },
+      "changeState": {
+        "enabled": false
+      }
+    },
+    "customMetadata": {}
+  }
+}
