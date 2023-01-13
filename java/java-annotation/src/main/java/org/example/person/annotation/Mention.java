@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface PersonMention {
+public @interface Mention {
 
-    String mention() default "hello";
+    String value() default "hello";
 }
