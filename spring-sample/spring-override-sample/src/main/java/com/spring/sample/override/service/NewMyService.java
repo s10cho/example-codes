@@ -9,9 +9,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class NewMyService extends MyService {
 
+    private final BookService newBookService;
+
+    public NewMyService(BookService bookService) {
+        super(null);
+        newBookService = bookService;
+    }
+
     @Override
     public String doSomething() {
         log.info("NewMyService doSomething method");
-        return "newMy";
+        String bookName = newBookService.getBookName();
+        return "New My ".concat(bookName);
     }
 }
