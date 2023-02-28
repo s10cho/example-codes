@@ -1,8 +1,5 @@
 package org.example.command.interpreter.domain;
 
-import static org.example.command.interpreter.domain.Command.FIND;
-import static org.example.command.interpreter.domain.Command.SEARCH;
-
 import lombok.extern.slf4j.Slf4j;
 import org.example.command.interpreter.domain.handler.FindCommandHandler;
 import org.example.command.interpreter.domain.handler.SearchCommandHandler;
@@ -18,8 +15,8 @@ class CommandInterpreterTest {
             new FindCommandHandler()
         );
 
-        OutputData findOutput = interpreter.execute(FIND, null);
-        OutputData searchOutput = interpreter.execute(SEARCH, null);
+        OutputData findOutput = interpreter.execute("find", null);
+        OutputData searchOutput = interpreter.execute("search", null);
 
         log.debug("findOutput = " + findOutput);
         log.debug("searchOutput = " + searchOutput);
