@@ -1,0 +1,4 @@
+GET http://localhost:8080/my?id=1&type=A&metadata=key01:value01,key02:value02
+Accept: application/json
+
+###

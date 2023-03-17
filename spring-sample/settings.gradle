@@ -1,3 +1,4 @@
 rootProject.name = 'spring-sample'
 include 'spring-override-sample'
+include 'spring-rest'
 
