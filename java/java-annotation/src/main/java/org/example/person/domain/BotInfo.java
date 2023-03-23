@@ -11,7 +11,7 @@ import org.example.person.annotation.Mention;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Mention(value = "안녕하세요.")
 public class BotInfo implements Person {
-    
+
     private String name;
 
     private int age;

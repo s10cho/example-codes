@@ -15,13 +15,13 @@ public class Memoizer<V, R> {
         this.bifunction = bifunction;
     }
 
-    public R memoize(V value) {
-        return map.computeIfAbsent(value, v -> bifunction.apply(v, this::memoize));
-    }
-
     public static void main(String[] args) {
         var fibo = new Memoizer<Integer, Integer>((n, fib) -> n < 2 ? 1 : fib.apply(n - 1) + fib.apply(n - 2));
 
         range(0, 20).map(fibo::memoize).forEach(System.out::println);
+    }
+
+    public R memoize(V value) {
+        return map.computeIfAbsent(value, v -> bifunction.apply(v, this::memoize));
     }
 }
