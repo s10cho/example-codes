@@ -1,0 +1,29 @@
+### api list
+GET http://localhost:8080
+Accept: application/json
+
+### people list
+GET http://localhost:8080/people
+Accept: application/json
+
+### people save
+POST http://localhost:8080/people
+Content-Type: application/json
+
+{
+  "firstName": "gil dong",
+  "lastName": "hong"
+}
+
+### find people 1
+GET http://localhost:8080/people/1
+Accept: application/json
+
+### profile
+GET http://localhost:8080/profile
+Accept: application/json
+
+
+### profile people
+GET http://localhost:8080/profile/people
+Accept: application/json

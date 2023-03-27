@@ -3,4 +3,5 @@ include 'spring-override-sample'
 include 'spring-rest'
 include 'spring-scheduling-tasks'
 include 'spring-scheduling-alarm-keeper'
+include 'spring-accessing-jpa-data-with-rest'
 
