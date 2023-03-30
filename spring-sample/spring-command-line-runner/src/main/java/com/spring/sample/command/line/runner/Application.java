@@ -2,6 +2,7 @@ package com.spring.sample.command.line.runner;
 
 import java.util.stream.IntStream;
 
+import com.spring.sample.command.line.runner.service.DomainAsyncService;
 import com.spring.sample.command.line.runner.service.DomainEventPublisher;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,8 @@ public class Application implements CommandLineRunner, ExitCodeGenerator {
 
     private final DomainEventPublisher domainEventPublisher;
 
+    private final DomainAsyncService domainAsyncService;
+
     public static void main(String[] args) {
         ApplicationContext run = SpringApplication.run(Application.class, args);
         int exit = SpringApplication.exit(run);
@@ -29,6 +32,10 @@ public class Application implements CommandLineRunner, ExitCodeGenerator {
         IntStream.rangeClosed(1, 100)
             .mapToObj(value -> "event " + value)
             .forEach(domainEventPublisher::sendEvent);
+
+        IntStream.rangeClosed(1, 100)
+            .mapToObj(value -> "mail " + value)
+            .forEach(domainAsyncService::sendMail);
     }
 
     @Override
