@@ -5,4 +5,5 @@ include 'spring-scheduling-tasks'
 include 'spring-scheduling-alarm-keeper'
 include 'spring-accessing-jpa-data-with-rest'
 include 'spring-command-line-runner'
+include 'spring-command-line-runner-with-multi-thread'
 
