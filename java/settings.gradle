@@ -7,4 +7,5 @@ include 'java-member'
 include 'java-tree-node'
 include 'java-command-interpreter'
 include 'java-example'
+include 'java-work'
 
