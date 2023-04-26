@@ -7,4 +7,5 @@ include 'spring-accessing-jpa-data-with-rest'
 include 'spring-command-line-runner'
 include 'spring-command-line-runner-with-multi-thread'
 include 'spring-simple-test'
+include 'spring-async'
 
