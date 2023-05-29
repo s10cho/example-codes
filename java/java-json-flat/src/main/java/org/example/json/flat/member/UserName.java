@@ -10,17 +10,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class User {
+public class UserName {
 
-    private long id;
+    private String first;
 
-    private UserName name;
-
-    private String profileUrl;
-
-    private String email;
-
-    private UserMetadata metadata;
+    private String last;
 
     @Override
     public String toString() {
