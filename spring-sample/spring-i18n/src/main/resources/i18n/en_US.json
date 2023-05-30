@@ -1,0 +1,9 @@
+{
+  "common": {
+    "common": "common",
+    "all": "all",
+    "user": "user",
+    "login": "login",
+    "logout": "logout"
+  }
+}

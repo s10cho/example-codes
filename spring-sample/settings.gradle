@@ -9,4 +9,5 @@ include 'spring-command-line-runner-with-multi-thread'
 include 'spring-simple-test'
 include 'spring-async'
 include 'spring-actuator'
+include 'spring-i18n'
 
