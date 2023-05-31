@@ -6,9 +6,6 @@ import java.util.HashMap;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class Memoizer<V, R> {
     private final BiFunction<? super V, Function<? super V, ? extends R>, ? extends R> bifunction;
 
@@ -21,9 +18,7 @@ public class Memoizer<V, R> {
     public static void main(String[] args) {
         var fibo = new Memoizer<Integer, Integer>((n, fib) -> n < 2 ? 1 : fib.apply(n - 1) + fib.apply(n - 2));
 
-        range(0, 20).map(fibo::memoize)
-            .mapToObj(Integer::toString)
-            .forEach(log::debug);
+        range(0, 20).map(fibo::memoize).forEach(System.out::println);
     }
 
     public R memoize(V value) {
