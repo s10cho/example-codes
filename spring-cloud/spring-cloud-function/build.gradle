@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example.spring.cloud.function'
+group 'com.example.spring.cloud.function'
 version '1.0-SNAPSHOT'
 
 repositories {

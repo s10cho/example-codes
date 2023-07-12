@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example.spring'
+group 'com.example.spring'
 version '1.0-SNAPSHOT'
 
 repositories {
