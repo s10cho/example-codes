@@ -2,6 +2,7 @@ package com.example;
 
 import com.example.biz.service.BizService;
 import com.example.util.PartitionIdGenerator;
+import com.example.util.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.CountDownLatch;
@@ -31,8 +32,12 @@ public class App {
             countDownLatch.countDown();
         }).forEach(executorService::execute);
 
+        ThreadUtil.check();
+
         countDownLatch.await();
         executorService.shutdown();
         log.info("[App] elapsed time {}(ms)", System.currentTimeMillis() - start);
     }
+
+
 }
