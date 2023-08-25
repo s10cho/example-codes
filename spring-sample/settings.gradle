@@ -10,6 +10,6 @@ include 'spring-simple-test'
 include 'spring-async'
 include 'spring-actuator'
 include 'spring-i18n'
-include 'spring-jpa-data'
+include 'spring-data-jpa'
 include 'spring-transaction'
 
