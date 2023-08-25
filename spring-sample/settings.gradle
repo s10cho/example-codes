@@ -12,4 +12,5 @@ include 'spring-actuator'
 include 'spring-i18n'
 include 'spring-data-jpa'
 include 'spring-transaction'
+include 'spring-data-elasticsearch'
 
