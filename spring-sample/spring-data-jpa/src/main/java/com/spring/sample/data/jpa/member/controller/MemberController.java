@@ -1,10 +1,10 @@
-package com.spring.sample.jpa.data.member.controller;
+package com.spring.sample.data.jpa.member.controller;
 
 import java.util.List;
 
-import com.spring.sample.jpa.data.member.dto.MemberNameResponse;
-import com.spring.sample.jpa.data.member.dto.MemberResponse;
-import com.spring.sample.jpa.data.member.service.MemberService;
+import com.spring.sample.data.jpa.member.dto.MemberNameResponse;
+import com.spring.sample.data.jpa.member.dto.MemberResponse;
+import com.spring.sample.data.jpa.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

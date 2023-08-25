@@ -1,4 +1,4 @@
-package com.spring.sample.jpa.data.member.domain;
+package com.spring.sample.data.jpa.member.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

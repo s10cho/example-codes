@@ -1,4 +1,4 @@
-package com.spring.sample.jpa.data.member.dto;
+package com.spring.sample.data.jpa.member.dto;
 
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -1,11 +1,11 @@
-package com.spring.sample.jpa.data.member.service;
+package com.spring.sample.data.jpa.member.service;
 
 import java.util.List;
 import java.util.stream.StreamSupport;
 
-import com.spring.sample.jpa.data.member.dto.MemberNameResponse;
-import com.spring.sample.jpa.data.member.dto.MemberResponse;
-import com.spring.sample.jpa.data.member.repository.MemberRepository;
+import com.spring.sample.data.jpa.member.dto.MemberNameResponse;
+import com.spring.sample.data.jpa.member.dto.MemberResponse;
+import com.spring.sample.data.jpa.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

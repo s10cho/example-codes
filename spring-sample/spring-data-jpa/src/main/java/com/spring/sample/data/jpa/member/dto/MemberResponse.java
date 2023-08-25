@@ -1,6 +1,6 @@
-package com.spring.sample.jpa.data.member.dto;
+package com.spring.sample.data.jpa.member.dto;
 
-import com.spring.sample.jpa.data.member.domain.Member;
+import com.spring.sample.data.jpa.member.domain.Member;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
