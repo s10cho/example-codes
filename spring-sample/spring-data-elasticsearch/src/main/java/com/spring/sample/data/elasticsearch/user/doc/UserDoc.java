@@ -11,7 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 @Getter
 @Document(indexName = "users")
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserDoc {
 
     @Id

@@ -6,6 +6,10 @@ Accept: application/json
 GET http://localhost:8080/users/hong
 Accept: application/json
 
+### user hong findAll
+GET http://localhost:8080/users
+Accept: application/json
+
 ### user hong register
 POST http://localhost:8080/users
 Content-Type: application/json
