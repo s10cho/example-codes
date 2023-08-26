@@ -1,0 +1,18 @@
+### user index remove
+DELETE http://localhost:9200/users
+Accept: application/json
+
+### user hong find
+GET http://localhost:8080/users/hong
+Accept: application/json
+
+### user hong register
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "userId": "hong",
+  "name": "홍길동"
+}
+
+###
