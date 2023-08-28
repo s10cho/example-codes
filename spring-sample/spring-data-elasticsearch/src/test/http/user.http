@@ -19,4 +19,6 @@ Content-Type: application/json
   "name": "홍길동"
 }
 
-###
+### user findAll query
+GET http://localhost:8080/users/query?name=*이*
+Accept: application/json
