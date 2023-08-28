@@ -17,7 +17,7 @@ public class UserSample implements CommandLineRunner {
     private final UserService userService;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         List.of(
             new User("hong", "홍길동"),
             new User("kim", "김길동"),
