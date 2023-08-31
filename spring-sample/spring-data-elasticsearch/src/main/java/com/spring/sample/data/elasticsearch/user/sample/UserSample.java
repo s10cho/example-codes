@@ -3,6 +3,7 @@ package com.spring.sample.data.elasticsearch.user.sample;
 import java.util.List;
 
 import com.spring.sample.data.elasticsearch.user.domain.User;
+import com.spring.sample.data.elasticsearch.user.repository.UserRepository;
 import com.spring.sample.data.elasticsearch.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -14,10 +15,21 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class UserSample implements CommandLineRunner {
 
+    private final UserRepository userRepository;
+
     private final UserService userService;
 
     @Override
     public void run(String... args) {
+        removeAll();
+        registerAll();
+    }
+
+    private void removeAll() {
+        userRepository.deleteAll();
+    }
+
+    private void registerAll() {
         List.of(
             new User("hong", "홍길동"),
             new User("kim", "김길동"),
