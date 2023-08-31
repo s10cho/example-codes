@@ -4,3 +4,10 @@ server:
 spring:
   elasticsearch:
     uris: http://localhost:9200
+
+logging:
+  level:
+    tracer: TRACE
+#    org:
+#      elasticsearch:
+#        client: TRACE
