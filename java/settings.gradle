@@ -14,4 +14,4 @@ include 'java-json-flat'
 include 'java-design-pattern'
 include 'java-async'
 include 'java-partition-thread'
-
+include 'java-jackson'
