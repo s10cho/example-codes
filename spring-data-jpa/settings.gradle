@@ -2,4 +2,5 @@ rootProject.name = 'spring-data-jpa'
 
 include 'spring-data-jpa-customer'
 include 'spring-data-jpa-tree-node'
+include 'spring-data-jpa-querydsl'
 
