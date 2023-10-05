@@ -36,5 +36,4 @@ public interface MemberRepository extends CrudRepository<Member, Long>, Querydsl
     default List<Member> search(Predicate predicate) {
         return StreamSupport.stream(findAll(predicate).spliterator(), false).toList();
     }
-
 }
