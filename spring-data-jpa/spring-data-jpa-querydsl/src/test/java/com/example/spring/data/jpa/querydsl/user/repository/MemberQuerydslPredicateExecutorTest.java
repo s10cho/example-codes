@@ -1,8 +1,8 @@
 package com.example.spring.data.jpa.querydsl.user.repository;
 
-import static com.example.spring.data.jpa.querydsl.user.repository.MemberRepository.nameLike;
-import static com.example.spring.data.jpa.querydsl.user.repository.MemberRepository.stateMessageLike;
-import static com.example.spring.data.jpa.querydsl.user.repository.MemberRepository.where;
+import static com.example.spring.data.jpa.querydsl.user.repository.query.MemberQuery.nameLike;
+import static com.example.spring.data.jpa.querydsl.user.repository.query.MemberQuery.stateMessageLike;
+import static com.example.spring.data.jpa.querydsl.user.repository.query.MemberQuery.where;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
@@ -17,16 +17,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @Slf4j
 @SpringBootTest
-class MemberRepositoryTest {
+class MemberQuerydslPredicateExecutorTest {
 
     @Autowired
-    MemberRepository memberRepository;
+    MemberQuerydslPredicateExecutor memberQuerydslPredicateExecutor;
 
     @BeforeEach
     void setup() {
-        memberRepository.save(new Member(1L, "홍길동", "http://placekitten.com/97/97", "오늘은 맑음"));
-        memberRepository.save(new Member(2L, "김길동", "http://placekitten.com/97/97", "오늘은 흐림"));
-        memberRepository.save(new Member(3L, "이상한", "http://placekitten.com/97/97", "오늘은 화창"));
+        memberQuerydslPredicateExecutor.save(new Member(1L, "홍길동", "http://placekitten.com/97/97", "오늘은 맑음"));
+        memberQuerydslPredicateExecutor.save(new Member(2L, "김길동", "http://placekitten.com/97/97", "오늘은 흐림"));
+        memberQuerydslPredicateExecutor.save(new Member(3L, "이상한", "http://placekitten.com/97/97", "오늘은 화창"));
     }
 
     @Test
@@ -36,7 +36,7 @@ class MemberRepositoryTest {
             .name("길동")
             .build();
 
-        List<Member> list = memberRepository.search(
+        List<Member> list = memberQuerydslPredicateExecutor.search(
             where(
                 nameLike(query.getName()),
                 stateMessageLike(query.getStateMessage())
@@ -58,7 +58,7 @@ class MemberRepositoryTest {
             .stateMessage("맑음")
             .build();
 
-        List<Member> list = memberRepository.search(
+        List<Member> list = memberQuerydslPredicateExecutor.search(
             where(
                 nameLike(query.getName()),
                 stateMessageLike(query.getStateMessage())

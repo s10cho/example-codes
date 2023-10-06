@@ -13,13 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @Slf4j
 @SpringBootTest
-class MemberQueryRepositoryTest {
+class MemberQuerydslRepositorySupportTest {
 
     @Autowired
     MemberQuerydslPredicateExecutor memberRepository;
 
     @Autowired
-    MemberQueryRepository memberQueryRepository;
+    MemberQuerydslRepositorySupport memberQuerydslRepositorySupport;
 
     @Test
     void findAllTest() {
@@ -31,7 +31,7 @@ class MemberQueryRepositoryTest {
             .name("길동")
             .build();
 
-        List<Member> list = memberQueryRepository.findAll(query);
+        List<Member> list = memberQuerydslRepositorySupport.findAll(query);
         log.info("list.size(): {}", list.size());
 
         assertThat(list).hasSize(2);
